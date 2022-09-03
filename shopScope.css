@@ -1,0 +1,20 @@
+.notNew {
+    display: none;
+}
+.isnew {
+    display: block;
+}
+
+.notOrder {
+    display: none;
+}
+.isOrder {
+    display: block;
+}
+
+.notThrifts {
+    display: none;
+}
+.isThrift {
+    display: block;
+}

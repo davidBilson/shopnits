@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- icon -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="aside.css">
+    <link rel="stylesheet" href="mainitems.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="shopScope.css">
+    <title>ShopNits - Clothing Store</title>
+
+</head>
+<body>
+    <div class="added" id="added">Item has been added to cart &check;</div>
+
+    <header class="header">
+        <div><h1>Shop<span class="logo-sec">Nits</span><ion-icon name="cart-outline"></ion-icon></h1> <p class="author">Developed by David_Bilson</p></div>
+
+        
+        <div>
+            <div class="div">Shop<span class="logo-sec">Nits</span><ion-icon name="cart-outline"></ion-icon></div>
+            <div class="div">
+               <span>Start, Run + Grow Your Business with Us</span>
+            </div>
+        </div>
+
+        <div class="cart_help">
+
+            <div id="carts">
+                Carts <ion-icon name="cart-outline"></ion-icon><span class="notification" id="cart-notification">0</span>
+            </div>
+
+            <div>
+            <span class="help">?</span><span class="centre">Help Centre</span> 
+            </div>
+
+        </div>
+
+        <div class="menu">
+            <h2>
+                <span  class="nav_menu" id="menu">
+                &#9776;
+                </span>
+                <span class="close-nav" id="closeNav">
+                &times;
+                </span>
+            </h2>
+        </div>
+    </header>
+
+
+
+    <div class="contain">
+    <!-- aside navigation -->
+    <section class="nav-section" id="nav-section">
+        
+        <h1>Shop<span class="logo-sec">Nits</span><ion-icon name="cart-outline"></ion-icon></h1>
+        <p>Your one-stop shop</p>
+
+        <ul>
+            <li><a href="#"> All Collections</a></li>
+
+            <li class="newCollection" id="newCollection">New Collections <span class="notification" id="newCollection-notification">6</span></li>
+
+            <li class="orders" id="orders">Orders <span class="notification" id="orders-notification">2</span></li>
+            
+            <li class="thrifts" id="thrifts">Thrifts <span class="notification" id="thrift-notification">8</span></li>
+
+            <li class="join" id="join">Join Us <span class="notification" id="join-notification">2</span></li>
+
+            <li class="vendor" id="vendor">Become a vendor <span class="notification" id="vendor-notification">3</span></li>
+
+            <li class="affiliate" id="affiliate">Affiliates <span class="notification" id="affiliate-notification">1</span></li>
+        </ul>
+    </section>
+
+    <section class="main-content">
+        <div class="items-container">
+
+            <div class="item hide">
+
+                <img src="./image/shopee.jpeg" alt="">
+                <article class="small">
+                    <div class="name-price">
+                        <h3 class="item-name">T-SHIRTS 6-IN-1 PACKS 100% QUALITY</h3>
+                        <h3 class="price">$129.99 <span class="old-price">$189.99</span></h3>
+                    </div>
+
+                    <div class="name-price">
+                    <h3 class="rating">&starf;&starf;&starf;&starf;&star;</h3>
+                    <p class="available">Available <span class="available-items">0897</span></p>
+                    </div>
+
+                    <p class="about-item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, vitae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, facere!</p>
+                    <button class="add-cart-btn">Add to cart</button>
+                </article>
+            </div>
+
+            <div class="item">
+
+                <img src="./image/cloth.jpeg" alt="">
+                <article class="small">
+                    <div class="name-price">
+                        <h3 class="item-name">SWEATSHIRT WOOL & LINEN LIMITED EDITION</h3>
+                        <h3 class="price">$209.99 <span class="old-price">$229.99</span></h3>
+                    </div>
+
+                    <div class="name-price">
+                    <h3 class="rating">&starf;&starf;&starf;&starf;&star;</h3>
+                    <p class="available">Available <span class="available-items">1197</span></p>
+                    </div>
+
+                    <p class="about-item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, vitae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, facere!</p>
+                    <button class="add-cart-btn">Add to cart</button>
+                </article>
+            </div>
+
+            <div class="item">
+                <img src="./image/nextgenshirt.webp" alt="">
+                <article class="small">
+                    <div class="name-price">
+                        <h3 class="item-name">NEXT-GEN CORPORATE SHIRTS - 6-IN-1</h3>
+                        <h3 class="price">$559.99 <span class="old-price">$1029.99</span></h3>
+                    </div>
+
+                    <div class="name-price">
+                    <h3 class="rating">&starf;&starf;&starf;&starf;&star;</h3>
+                    <p class="available">Available <span class="available-items">0057</span></p>
+                    </div>
+
+                    <p class="about-item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, vitae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, facere!</p>
+                    <button class="add-cart-btn">Add to cart</button>
+                </article>
+            </div>
+
+            <div class="item">
+                <img src="./image/stockjean.jpeg" alt="">
+                <article class="small">
+                    <div class="name-price">
+                        <h3 class="item-name">MODERN STOCK JEAN - NEW AGE MATERIAL</h3>
+                        <h3 class="price">$99.99 <span class="old-price">$129.99</span></h3>
+                    </div>
+
+                    <div class="name-price">
+                    <h3 class="rating">&starf;&starf;&starf;&starf;&star;</h3>
+                    <p class="available">Available <span class="available-items">0107</span></p>
+                    </div>
+
+                    <p class="about-item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, vitae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, facere!</p>
+                    <button class="add-cart-btn">Add to cart</button>
+                </article>
+            </div>
+
+            <div class="item">
+                <img src="./image/heavysweater.jpeg" alt="">
+                <article class="small">
+                    <div class="name-price">
+                        <h3 class="item-name">HAND-CRAFTED WOOL SWEATSHIRT 100% WOOL</h3>
+                        <h3 class="price">$79.99 <span class="old-price">$113.99</span></h3>
+                    </div>
+
+                    <div class="name-price">
+                    <h3 class="rating">&starf;&starf;&starf;&starf;&star;</h3>
+                    <p class="available">Available <span class="available-items">0892</span></p>
+                    </div>
+
+                    <p class="about-item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, vitae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, facere!</p>
+                    <button class="add-cart-btn">Add to cart</button>
+                </article>
+            </div>
+
+            <div class="item">
+                <img src="./image/gloves.webp" alt="">
+                <article class="small">
+                    <div class="name-price">
+                        <h3 class="item-name">INDUSTRIAL GLOVES - ASIAN HEAVY DUTY</h3>
+                        <h3 class="price">$49.99 <span class="old-price">$63.99</span></h3>
+                    </div>
+
+                    <div class="name-price">
+                    <h3 class="rating">&starf;&starf;&starf;&starf;&star;</h3>
+                    <p class="available">Available <span class="available-items">2186</span></p>
+                    </div>
+
+                    <p class="about-item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, vitae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, facere!</p>
+                    <button class="add-cart-btn">Add to cart</button>
+                </article>
+            </div>
+
+            <div class="item">
+                <img src="./image/african.jpeg" alt="">
+                <article class="small">
+                    <div class="name-price">
+                        <h3 class="item-name">AFRICAN LINES - A NEW STOCK OF CULTURE</h3>
+                        <h3 class="price">$60.99 <span class="old-price">$0.00</span></h3>
+                    </div>
+
+                    <div class="name-price">
+                    <h3 class="rating">&starf;&starf;&starf;&starf;&star;</h3>
+                    <p class="available">Available <span class="available-items">1000</span></p>
+                    </div>
+
+                    <p class="about-item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, vitae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, facere!</p>
+                    <button class="add-cart-btn">Add to cart</button>
+                </article>
+            </div>
+            <div class="item">
+                <img src="./image/winterjacket.jpeg" alt="">
+                <article class="small">
+                    <div class="name-price">
+                        <h3 class="item-name">WINTER JACKET - BREATHABLE LINEN</h3>
+                        <h3 class="price">$660.99 <span class="old-price">$1020.00</span></h3>
+                    </div>
+
+                    <div class="name-price">
+                    <h3 class="rating">&starf;&starf;&starf;&starf;&star;</h3>
+                    <p class="available">Available <span class="available-items">0320</span></p>
+                    </div>
+
+                    <p class="about-item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, vitae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, facere!</p>
+                    <button class="add-cart-btn">Add to cart</button>
+                </article>
+            </div>
+
+            <div class="item">
+                <img src="./image/corporateladies.jpeg" alt="">
+                <article class="small">
+                    <div class="name-price">
+                        <h3 class="item-name">CORPORATE LADIES WEAR COMPLETE PACK</h3>
+                        <h3 class="price">$880.99 <span class="old-price">$1920.00</span></h3>
+                    </div>
+
+                    <div class="name-price">
+                    <h3 class="rating">&starf;&starf;&starf;&starf;&star;</h3>
+                    <p class="available">Available <span class="available-items">0020</span></p>
+                    </div>
+
+                    <p class="about-item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, vitae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, facere!</p>
+                    <button class="add-cart-btn">Add to cart</button>
+                </article>
+            </div>
+
+            <div class="item">
+                <img src="./image/exoticBag.webp" alt="">
+                <article class="small">
+                    <div class="name-price">
+                        <h3 class="item-name">RARE EDITION X-R1 BAG COLLECTION</h3>
+                        <h3 class="price">$20.99 <span class="old-price">$92.00</span></h3>
+                    </div>
+                    <div class="name-price">
+                    <h3 class="rating">&starf;&starf;&starf;&starf;&star;</h3>
+                    <p class="available">Available <span class="available-items">0019</span></p>
+                    </div>
+
+                    <p class="about-item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, vitae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, facere!</p>
+                    <button class="add-cart-btn">Add to cart</button>
+                </article>
+            </div>
+
+            <div class="item">
+                <img src="./image/shoe.webp" alt="">
+                <article class="small">
+                    <div class="name-price">
+                        <h3 class="item-name">BETA COLLECTIONS MR-X SHOES</h3>
+                        <h3 class="price">$47.99 <span class="old-price">$88.00</span></h3>
+                    </div>
+                    <div class="name-price">
+                    <h3 class="rating">&starf;&starf;&starf;&starf;&star;</h3>
+                    <p class="available">Available <span class="available-items">0013</span></p>
+                    </div>
+
+                    <p class="about-item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, vitae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, facere!</p>
+                    <button class="add-cart-btn">Add to cart</button>
+                </article>
+            </div>
+
+            <div class="item hidden">
+                <img src="./image/shoe.webp" alt="">
+                <article class="small">
+                    <div class="name-price">
+                        <h3 class="item-name">BETA COLLECTIONS MR-X SHOES</h3>
+                        <h3 class="price">$47.99 <span class="old-price">$88.00</span></h3>
+                    </div>
+                    <div class="name-price">
+                    <h3 class="rating">&starf;&starf;&starf;&starf;&star;</h3>
+                    <p class="available">Available <span class="available-items">0013</span></p>
+                    </div>
+
+                    <p class="about-item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, vitae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, facere!</p>
+                    <button class="add-cart-btn">Add to cart</button>
+                </article>
+            </div>
+            <div class="item hidden">
+                <img src="./image/shoe.webp" alt="">
+                <article class="small">
+                    <div class="name-price">
+                        <h3 class="item-name">BETA COLLECTIONS MR-X SHOES</h3>
+                        <h3 class="price">$47.99 <span class="old-price">$88.00</span></h3>
+                    </div>
+                    <div class="name-price">
+                    <h3 class="rating">&starf;&starf;&starf;&starf;&star;</h3>
+                    <p class="available">Available <span class="available-items">0013</span></p>
+                    </div>
+
+                    <p class="about-item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, vitae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, facere!</p>
+                    <button class="add-cart-btn">Add to cart</button>
+                </article>
+            </div>
+           
+           
+            
+
+            <!-- shopping items should not exceed here -->
+        </div>
+    </section>
+
+</div>
+    <script src="./app.js"></script>
+</body>
+</html>

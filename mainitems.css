@@ -1,0 +1,130 @@
+.main-content {
+    width: 85%;
+    margin-left: calc(15% + 3rem);
+}
+.item-name {
+    color: darkslategrey;
+    margin: 5px 0;
+    font-size: 1rem;
+}
+.price {
+    font-size: 1rem;
+    margin: 5px 0;
+    float: right;
+    text-align: right;
+}
+.old-price {
+    color: silver;
+    text-decoration: line-through;
+}
+.rating {
+    margin: 5px 0;
+    font-size: 1.3rem;
+    color: orange;
+}
+
+.available {
+    margin: 5px 0;
+}
+
+.name-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.small {
+    width: 100%;
+    padding:0 15px;
+}
+.about-item {
+    margin: 5px 0;
+    font-size: .7rem;
+}
+
+.available-items {
+    color: red;
+    font-weight: 900;
+    margin-left: 8px;
+}
+.available {
+    color:darkslategray;
+}
+.item {
+    max-width: 350px;
+    height: 460px;
+    overflow: hidden;
+    box-shadow: 0px 0px 30px #eee;
+    padding: 0 0 20px 0;
+    transition: .5s ease-in-out;
+    border-radius: 6px;
+}
+.item:hover {
+    box-shadow: 0px 0px 40px rgb(136, 136, 136);
+}
+.item img {
+    height: 230px;
+}
+
+.items-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.add-cart-btn {
+    width: 100%;
+    border: none;
+    padding: 12px 0;
+    margin-top: 8px;
+    background: orangered;
+    color: #fff;
+    font-weight: 600;
+    font-size: .9rem;
+    cursor: pointer;
+}
+
+.add-cart-btn:active {
+    background: rgb(209, 56, 0);
+}
+
+.new {
+    color:rgb(255, 17, 0);
+    font-weight: 600;
+    text-shadow: 0px 0px 20px red;
+    position: absolute;
+    
+}
+
+.hidden {
+    visibility: hidden;
+    max-height: 200px;
+}
+
+
+@media (max-width:1600px) {
+    
+}
+@media (max-width:1300px) {
+} 
+
+@media (max-width:1024px) {
+    .main-content {
+        width: 100%;
+        margin-left: 0;
+    }
+    /* items */
+    .items-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+    .item {
+        max-width: 300px;
+    }
+}
+@media (max-width:550px) {
+}
