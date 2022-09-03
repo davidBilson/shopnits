@@ -127,4 +127,7 @@
     }
 }
 @media (max-width:550px) {
+    .last-item {
+        display: none;
+    }
 }
