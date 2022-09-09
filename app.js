@@ -1,63 +1,189 @@
-const newCollection = document.getElementById('newCollection');
-const orders = document.getElementById('orders');
-const carts = document.getElementById('carts');
-const thrifts = document.getElementById('thrifts');
-const join = document.getElementById('thrifts');
-const vendor = document.getElementById('vendor')
-const items = document.querySelectorAll('.item');
-const cartNotification = document.getElementById('cart-notification');
-const cartClick = document.getElementById('carts');
-const addCart = document.querySelectorAll('.add-cart-btn');
+// 
 const addedNotification = document.getElementById('added');
-const navMenu = document.getElementById('menu');
-const closeNavMenu = document.getElementById('closeNav');
+function itemAddedNotification(){
 
-// EVENTS LISTENERS
-newCollection.addEventListener('click', function() {
-alert('New Collection');
-});
+    addedNotification.style.display = 'block';
+    setTimeout(() => {
+    addedNotification.style.display = 'none';
+    }, 2000);
+    
+    }
 
-orders.addEventListener('click', function() {
-alert('Orders');
-});
 
-carts.addEventListener('click', function() {
-alert('carts')
-})
+// product objects go here
+let products = [
+    {
+        name: 'T-SHIRTS 6-IN 100% QUALITY',
+        tag: 'item_01',
+        price: 129,
+        inCart: 0
+    },
+    {
+        name: 'SWEATSHIRT WOOL & LINEN LIMITED EDITION',
+        tag: 'item_02',
+        price: 209,
+        inCart: 0
+    },
+    {
+        name: 'NEXT-GEN CORPORATE SHIRTS',
+        tag: 'item_03',
+        price: 559,
+        inCart: 0
+    },
+    {
+        name: 'MODERN STOCK JEAN - NEW AGE MATERIAL',
+        tag: 'item_04',
+        price: 99,
+        inCart: 0
+    },
+    {
+        name: 'HAND-CRAFTED WOOL SWEATSHIRT',
+        tag: 'item_05',
+        price: 79,
+        inCart: 0
+    },
+    {
+        name: 'INDUSTRIAL GLOVES - ASIAN HEAVY DUTY',
+        tag: 'item_06',
+        price: 79.99,
+        inCart: 0
+    },
+    {
+        name: 'AFRICAN LINES - A NEW STOCK OF CULTURE',
+        tag: 'item_07',
+        price: 60.99,
+        inCart: 0
+    },
+    {
+        name: 'WINTER JACKET - BREATHABLE LINEN',
+        tag: 'item_08',
+        price: 660.99,
+        inCart: 0
+    },
+    {
+        name: 'CORPORATE LADIES WEAR COMPLETE',
+        tag: 'item_09',
+        price: 880.99,
+        inCart: 0
+    },
+    {
+        name: 'RARE EDITION X-R1 BAG COLLECTION',
+        tag: 'item_10',
+        price: 20.99,
+        inCart: 0
+    },
+    {
+        name: 'BETA COLLECTIONS MR-X SHOES',
+        tag: 'item_11',
+        price: 47.99,
+        inCart: 0
+    }
+]
 
-// USER INTERFACE
-console.log(cartNotification.textContent);
 
-addCart.forEach((btn)=>{
-btn.addEventListener("click", incrementCart);
-});
+// select all add to cart button
+const carts = document.querySelectorAll('.add-cart-btn');
+console.log(carts)
 
-let value = 0;
+// looping through all  the add to cart buttons
+for (let i = 0; i < carts.length; i++) {
+    carts[i].addEventListener('click', () => {
+        // notification that item has been added to cart
+        itemAddedNotification();
 
-function incrementCart(){
-value ++;
-cartNotification.textContent = value;
-console.log(cartNotification.textContent);
-addedNotification.style.display = 'block';
+        cartNumbers(products[i]);
+        totalCost(products[i]);
+    })
+}
 
-setTimeout(() => {
-addedNotification.style.display = 'none';
-}, 2000);
+// onload cart numbers when u just load a page, check the local storage and let the value sta put on the cart-notification
+function onLoadCartNumbers() {
+    let productNumbers = localStorage.getItem('cartNumbers');
+    if (productNumbers) {
+        // grab cart-notification number
+        document.querySelector('#cartNum').textContent = productNumbers;
+    }
+}
+
+
+// lets know how many items are in cart
+function cartNumbers(product) {
+    let productNumbers = localStorage.getItem('cartNumbers');
+    productNumbers = parseInt(productNumbers);
+
+    if (productNumbers) {
+        localStorage.setItem('cartNumbers', productNumbers + 1);
+        // update number of items in cart at the navbar with this selector, the id="cart-notification"
+        document.querySelector('#cartNum').textContent = productNumbers + 1;
+    } else {
+        localStorage.setItem('cartNumbers', 1);
+        // update number of items in cart at the navbar with this selector, the id="cart-notification"
+        document.querySelector('#cartNum').textContent = 1;
+    }
+    setItems(product);
+
+}
+
+function setItems(product) {
+    let cartItems = localStorage.getItem('productsInCart');
+    cartItems = JSON.parse(cartItems);
+    console.log('my cartItems are', cartItems)
+
+    if (cartItems != null) {
+        if (cartItems[product.tag] == undefined) {
+            cartItems = {
+                ...cartItems,
+                [product.tag]: product
+            }
+        }
+        cartItems[product.tag].inCart += 1;
+    } else {
+        product.inCart = 1;
+        cartItems = {
+            [product.tag]: product
+        }
+    }
+
+    product.inCart = 1;
+    cartItems = {
+        [product.tag]: product
+    }
+    localStorage.setItem('productsInCart', JSON.stringify(cartItems));
+}
+
+function totalCost(product){
+    let cartCost = localStorage.getItem('totalCost');
+
+    if (cartCost != null) {
+        cartCost = parseInt(cartCost); 
+        localStorage.setItem('totalCost', cartCost + product.price);
+    } else {
+        localStorage.setItem('totalCost', product.price)
+    }
 
 }
 
 
-// Navigation
-navMenu.addEventListener('click', () => {
-const navigation = document.getElementById('nav-section');
-navigation.style.visibility = 'visible';
-navMenu.style.display = 'none';
-closeNavMenu.style.display = 'block';
-});
+function displayCart() {
+    let cartItems = localStorage.getItem('productsInCart');
+    cartItems = JSON.parse(cartItems);
+    console.log(cartItems);
+    let productContainer = document.querySelector('.products-container')
+    if (cartItems && productContainer) {
+       productContainer.innerHTML = '';
+       Object.values(cartItems).map(item => {
+        productContainer.innerHTML += `
+        <div class="product">
+        <span>&times;</span>
+        <img src="./images/${item.tag}.jpg" alt="${item.tag}>
+        <span>${item.name}</span>
+        </div>
+        `
+       })
+    }
+}
 
-closeNavMenu.addEventListener('click', () => {
-const navigation = document.getElementById('nav-section');
-navigation.style.visibility = 'hidden';
-navMenu.style.display = 'block';
-closeNavMenu.style.display = 'none';
-})
+onLoadCartNumbers();
+displayCart();
+
+// i stopped at 17:53

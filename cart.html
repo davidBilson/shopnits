@@ -4,9 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShopNits - Clothing Store</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="aside.css">
+    <link rel="stylesheet" href="header.css">
+    <title>ShopNits - Carts</title>
 </head>
 <body>
-    
+    <header class="header">
+
+        <div>
+
+        <h1 class="logo">Shop<span class="logo-sec">Nits</span><ion-icon name="cart-outline"></ion-icon></h1>
+
+        <p class="author">Developed by David_Bilson</p>
+        </div>
+        
+        <div>
+            <div class="div">Shop<span class="logo-sec">Nits</span><ion-icon name="cart-outline"></ion-icon></div>
+            <div class="div">
+               <span>Start, Run + Grow Your Business with Us</span>
+            </div>
+        </div>
+
+        <div class="cart_help">
+
+            <div id="carts">
+                Carts <ion-icon name="cart-outline"></ion-icon><span class="notification" id="cartNum">0</span>
+            </div>
+
+            <div>
+            <span class="help">?</span><span class="centre">Help Centre</span> 
+            </div>
+
+        </div>
+
+        <div class="menu">
+            <h2>
+                <span  class="nav_menu" id="menu">
+                &#9776;
+                </span>
+                <span class="close-nav" id="closeNav">
+                &times;
+                </span>
+            </h2>
+        </div>
+    </header>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="products-container">
+
+        <div class="product-header">
+            <h5 class="product-title">PRODUCT</h5>
+            <h5 class="price">PRICE</h5>
+            <h5 class="quantity">QUANTITY</h5>
+            <h5 class="total">TOTAL</h5>
+        </div>
+
+        <div class="products">
+
+        </div>
+    </div>
+
+<script src="./app.js"></script>
 </body>
 </html>
