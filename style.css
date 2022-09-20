@@ -40,15 +40,6 @@ img {
     }   
 }
 
-.item-btn-col {
-    background: crimson;
-    padding: 0px 6px;
-    border-radius: 50%;
-    color: white;
-    font-weight: 900;
-    width: fit-content;
-}
-
 @media (max-width:550px) {
     .contain {
         margin-top: 15vh;

@@ -169,30 +169,39 @@ function displayCart() {
     let cartItems = localStorage.getItem('productsInCart');
     cartItems = JSON.parse(cartItems);
 
-    let productContainer = document.querySelector('#products-container');
+    let productContainer = document.querySelector('.products');
 
     let cartCost = localStorage.getItem('totalCost');
     console.log('this is the new' + cartItems);
+
+    let cartNumbers = localStorage.getItem('cartNumbers');
+    cartNumbers = JSON.parse(cartNumbers);
+    console.log('is this cart numbers?' + cartNumbers);
+    let itemNumber = document.getElementById('orderNumber');
+    itemNumber.textContent = cartNumbers;
+
 
     if (cartItems && productContainer) {
         productContainer.innerHTML = '';
         Object.values(cartItems).map(item => {
             productContainer.innerHTML += `
-            <div class='product'>
+            <div class='product-box'>
+
+            <div class='product product-name-category'>
             <span class='del-item-btn item-btn-col' >&times;</span>
             <span>${item.name}</span>
             </div>
 
-            <div class='price' >${item.price}</div>
+            <div class='price product-price-category' >$${item.price}</div>
 
-            <div class='quantity'>
-            <span class='decrease item-btn-col'>-</span>
-            <span>${item.inCart}</span>
-            <span class='increase item-btn-col'>+</span>
+            <div class='quantity product-quantity-category'>
+            <span>${item.inCart} x ?</span>
             </div>
 
-            <div class='total'>
+            <div class='total product-total-category'>
             $${item.inCart + item.price}.00
+            </div>
+
             </div>
             `
         });
@@ -200,20 +209,35 @@ function displayCart() {
         productContainer.innerHTML += `
             <div class='basketTotalContainer'>
             <h4 class='basketTotalTitle'>
-                basket Total
+                Total Payout
             </h4>
 
             <h4  class='basketTotal'>
-            $${}
+            $${cartCost}
             </h4>
             </div>
         `
-
     }
 
 }
 
 onLoadCartNumbers();
 displayCart();
-
 // i stopped at 17:53
+
+
+
+
+
+
+let checkoutBtn = document.getElementById('checkout');
+let checkBox = document.getElementById('checkout-box');
+
+checkoutBtn.addEventListener('click', () => {
+    checkBox.style.display = 'block';
+});
+
+let payoutBtn = document.getElementById('proceed-btn');
+payoutBtn.addEventListener('click', () => {
+    alert('Demo project: payment system not added');
+})

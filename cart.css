@@ -1,0 +1,117 @@
+.cart-box {
+    max-width: 700px;
+    width: 92%;
+    margin: 12.5vh auto auto auto;
+    box-shadow: 0px 0px 15px lavender;
+    padding: 20px 5px 100px 5px ;
+}
+.cart {
+    border-bottom: 1px solid rgb(201, 201, 201);
+    padding: 15px;
+    font-size: .7rem;
+    margin-bottom: 15px;
+}
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    color: orange;
+    text-align: center;
+}
+
+.product-box {
+    display: flex;
+    justify-content: space-between;
+    /* background: yellow; */
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: .7rem;
+    text-align: center;
+}
+
+.product-name-category {
+    width: 100px;
+    /* background: red; */
+    font-size: .7rem;
+}
+
+.product-price-category {
+    width: 55px;
+    /* background:orange; */
+    font-size: .7rem;
+}
+
+.product-quantity-category {
+    width: 64px;
+    /* background:cyan; */
+    font-size: .7rem;
+}
+
+.product-total-category {
+    width: 64px;
+    /* background:rgb(153, 0, 255); */
+    font-size: .7rem;
+    font-weight: 700;
+}
+
+.product {
+    display: flex;
+    gap: 5%;
+}
+
+
+.item-btn-col {
+    border-radius: 50%;
+    color: red;
+    font-weight: 900;
+    font-weight: 4rem;
+    width: fit-content;
+}
+
+.basketTotalTitle {
+    color: orange;
+    font-weight: 900;
+}
+
+.basketTotalContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px 7.5px;
+    /* background: rgb(255, 166, 0); */
+    color: rgb(0, 0, 0);
+    margin: 12px;
+}
+
+.checkout {
+    padding: 15px 40px;
+    color: white;
+    font-weight: 700;
+    background: orange;
+    margin: 12px;
+    border: none;
+    border-radius: 6px;
+}
+
+.checkout-box {
+    max-width: 700px;
+    width: 92%;
+    margin: 2.5vh auto 12.5vh auto;
+    box-shadow: 0px 0px 35px rgb(199, 199, 199);
+    padding: 20px;
+    background: orange;
+    display: none;
+    border-radius: 6px;
+}
+
+.proceed-btn {
+    padding: 15px 20px;
+    color: white;
+    font-weight: 700;
+    background: orange;
+    box-shadow: 0px 0px 20px grey;
+    margin: 12px;
+    border: none;
+    border-radius: 6px;
+}

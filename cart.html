@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="aside.css">
     <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="cart.css">
     <title>ShopNits - Carts</title>
 </head>
 <body>
@@ -42,9 +43,9 @@
 
         <div class="menu">
             <h2>
-                <span  class="nav_menu" id="menu">
+                <!-- <span  class="nav_menu" id="menu">
                 &#9776;
-                </span>
+                </span> -->
                 <span class="close-nav" id="closeNav">
                 &times;
                 </span>
@@ -52,20 +53,36 @@
         </div>
     </header>
 
-    <br><br>r><br><br><br><br>
-    <div class="products-container" id="products-container">
 
+    <section class="cart-box">
+
+    <div class="cart">
+        <h3>Your Orders (<span id="orderNumber"></span> Items' )</h3>
+    </div>
+    <div class="products-container" id="products-container">
         <div class="product-header">
-            <h5 class="product-title">PRODUCT</h5>
-            <h5 class="price">PRICE</h5>
-            <h5 class="quantity">QUANTITY</h5>
-            <h5 class="total">TOTAL</h5>
+            <h5 class="product-title product-name-category">Product</h5>
+            <h5 class="price product-price-category">Price</h5>
+            <h5 class="quantity product-quantity-category">Quantity</h5>
+            <h5 class="total product-total-category">Total</h5>
         </div>
 
         <div class="products">
 
         </div>
     </div>
+
+    <br>
+    <button class="checkout" id="checkout">Checkout</button>
+</section>
+
+<section class="checkout-box" id="checkout-box">
+   <p>
+    Hello! This is  a demo e-commerce project!
+   </p>
+   <br>
+   <button class="proceed-btn" id="proceed-btn" >Proceed to Payment</button>
+</section>
 
 <script src="./app.js"></script>
 </body>
