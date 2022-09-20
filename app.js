@@ -129,7 +129,7 @@ function setItems(product) {
     cartItems = JSON.parse(cartItems);
     console.log('my cartItems are', cartItems)
 
-    if (cartItems != null) {
+    if (cartItems != undefined) {
         if (cartItems[product.tag] == undefined) {
             cartItems = {
                 ...cartItems,
@@ -146,7 +146,8 @@ function setItems(product) {
 
     product.inCart = 1;
     cartItems = {
-        [product.tag]: product
+        ...cartItems,
+                [product.tag]: product
     }
     localStorage.setItem('productsInCart', JSON.stringify(cartItems));
 }
@@ -167,20 +168,49 @@ function totalCost(product){
 function displayCart() {
     let cartItems = localStorage.getItem('productsInCart');
     cartItems = JSON.parse(cartItems);
-    console.log(cartItems);
-    let productContainer = document.querySelector('.products-container')
+
+    let productContainer = document.querySelector('#products-container');
+
+    let cartCost = localStorage.getItem('totalCost');
+    console.log('this is the new' + cartItems);
+
     if (cartItems && productContainer) {
-       productContainer.innerHTML = '';
-       Object.values(cartItems).map(item => {
+        productContainer.innerHTML = '';
+        Object.values(cartItems).map(item => {
+            productContainer.innerHTML += `
+            <div class='product'>
+            <span class='del-item-btn item-btn-col' >&times;</span>
+            <span>${item.name}</span>
+            </div>
+
+            <div class='price' >${item.price}</div>
+
+            <div class='quantity'>
+            <span class='decrease item-btn-col'>-</span>
+            <span>${item.inCart}</span>
+            <span class='increase item-btn-col'>+</span>
+            </div>
+
+            <div class='total'>
+            $${item.inCart + item.price}.00
+            </div>
+            `
+        });
+
         productContainer.innerHTML += `
-        <div class="product">
-        <span>&times;</span>
-        <img src="./images/${item.tag}.jpg" alt="${item.tag}>
-        <span>${item.name}</span>
-        </div>
+            <div class='basketTotalContainer'>
+            <h4 class='basketTotalTitle'>
+                basket Total
+            </h4>
+
+            <h4  class='basketTotal'>
+            $${}
+            </h4>
+            </div>
         `
-       })
+
     }
+
 }
 
 onLoadCartNumbers();
