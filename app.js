@@ -237,6 +237,7 @@ checkoutBtn.addEventListener('click', () => {
 });
 
 let payoutBtn = document.getElementById('proceed-btn');
+
 payoutBtn.addEventListener('click', () => {
-    alert('Demo project: payment system not added');
-});
+    location.href='payment.html'
+})
