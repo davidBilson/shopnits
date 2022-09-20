@@ -83,7 +83,7 @@ let products = [
 
 // select all add to cart button
 const carts = document.querySelectorAll('.add-cart-btn');
-console.log(carts)
+
 
 // looping through all  the add to cart buttons
 for (let i = 0; i < carts.length; i++) {
@@ -127,7 +127,7 @@ function cartNumbers(product) {
 function setItems(product) {
     let cartItems = localStorage.getItem('productsInCart');
     cartItems = JSON.parse(cartItems);
-    console.log('my cartItems are', cartItems)
+    
 
     if (cartItems != undefined) {
         if (cartItems[product.tag] == undefined) {
@@ -172,11 +172,10 @@ function displayCart() {
     let productContainer = document.querySelector('.products');
 
     let cartCost = localStorage.getItem('totalCost');
-    console.log('this is the new' + cartItems);
 
     let cartNumbers = localStorage.getItem('cartNumbers');
     cartNumbers = JSON.parse(cartNumbers);
-    console.log('is this cart numbers?' + cartNumbers);
+    
     let itemNumber = document.getElementById('orderNumber');
     itemNumber.textContent = cartNumbers;
 
@@ -240,4 +239,4 @@ checkoutBtn.addEventListener('click', () => {
 let payoutBtn = document.getElementById('proceed-btn');
 payoutBtn.addEventListener('click', () => {
     alert('Demo project: payment system not added');
-})
+});

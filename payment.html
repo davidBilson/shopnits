@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="payment.css">
+    <title>Document</title>
+    <style>
+        *,body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .payout {
+            max-width: 600px;
+            width: 90%;
+            border-radius: 8px;
+            margin: 5vh auto;
+        }
+        .totalAmountPayBox {
+            width: 100%;
+            margin-bottom: 20px;
+            box-shadow: 0px 0px 5px lightgrey;
+            padding-bottom: 20px;
+        }
+        .header  {
+            background: rgba(240, 156, 0, 0.938);
+            width: 100%;
+            text-align: center;
+            padding: 3rem 0;
+            margin-bottom: 1rem;
+        }
+        .header h1 {
+            margin-top: 1rem;
+            font-size: 2.5rem;
+            color: white;
+        }
+        .pay-option {
+            width: 80%;
+            margin: auto;
+        }
+        .pay-option p {
+            margin-bottom: 10px;
+        }
+        .checking {
+        margin-right: 10px;
+        }
+
+        .paymentDetails {
+            width: 100%;
+            margin-bottom: 20px;
+            box-shadow: 0px 0px 5px lightgrey;
+            padding: 30px 20%;
+        }
+        .paymentDetails h2 {
+            font-weight: 400;
+            padding: 20px 0px;
+        }
+        .inputA{
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            background: lavender;
+        }
+        .subtmitBtn {
+            width: 100%;
+            border: none;
+            padding: 14px 0;
+            background: orangered ;
+            color: white;
+            font-weight: 600;
+        }
+        .backPageBtn {
+            width: 60%;
+            border: none;
+            padding: 14px 0;
+            background: lavender;
+            color: grey;
+            font-weight: 600;
+        }
+        @media (max-width:600px) {
+            .paymentDetails {
+            width: 100%;
+            margin-bottom: 20px;
+            box-shadow: 0px 0px 5px lightgrey;
+            padding: 30px 10%;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="payout">
+        <form action="">
+            <div class="totalAmountPayBox">
+                <header class="header">
+                    <p>Total to Pay</p>
+                    <h1 class="totalAmountPay" id="totalAmountPay">$400.00</h1>
+                </header>
+            
+            <div class="pay-option">
+            <p>How would you like to pay?</p>
+            <input type="radio" class="checking" checked name="credit_card" value="Credit Card" >Credit Card <br>
+            <input type="radio" class="checking" disabled > PayPal <br>    
+            </div>
+            
+            </div>
+
+            <div class="paymentDetails">
+                <h2>Your Payment Details</h2>
+
+                <label class="label" for="name">Name on Card</label><br>
+                <input class="inputA" type="text" name="Name" placeholder="Olivia Baker" required><br>
+
+                <label class="label" for="card">Card Number</label><br>
+                <input class="inputA" type="number" placeholder="4271 XXXX XXXX XXXX" required name="card"><br>
+
+                <label class="label" for="expiryDate">Expiry Date</label>
+                <input class="inputA" type="date"><br>
+
+                <label class="label" for="cvv">CVV</label><br>
+                <input class="inputA" type="number"  id="cvv" placeholder="XXX"><br>
+                
+                <button class="subtmitBtn" type="submit">Pay Now</button>
+            </div>
+        </form>
+
+        <button class="backPageBtn">&larr; &nbsp; Back to Order Overview</button>
+    </section>
+
+
+    
+    <script src="./payment.js"></script>
+
+</body>
+</html>
